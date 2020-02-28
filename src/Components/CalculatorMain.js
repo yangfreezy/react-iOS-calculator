@@ -97,7 +97,7 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
     }
     if (firstInputProcessing) {
       if (value === ".") {
-        if (displayValue.includes(".")) return;
+        if (firstInput.includes(".")) return;
         setDisplayValue(firstInput + ".");
         setFirstInput(firstInput + ".");
       } else {
@@ -115,7 +115,7 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
     }
     if (secondInputProcessing) {
       if (value === ".") {
-        if (displayValue.includes(".")) return;
+        if (secondInput.includes(".")) return;
         setDisplayValue(secondInput + ".");
         setSecondInput(secondInput + ".");
       } else {
