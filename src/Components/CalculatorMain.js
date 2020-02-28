@@ -31,10 +31,18 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
         break;
       case "±":
         if (secondInput) {
-          setDisplayValue("-" + displayValue);
+          if (secondInput.includes("-")) {
+            setDisplayValue(secondInput.slice(1));
+          } else {
+            setDisplayValue("-" + secondInput);
+          }
           setSecondInput(String(-+secondInput));
         } else if (firstInput) {
-          setDisplayValue("-" + displayValue);
+          if (firstInput.includes("-")) {
+            setDisplayValue(firstInput.slice(1));
+          } else {
+            setDisplayValue("-" + firstInput);
+          }
           setFirstInput(String(-+firstInput));
         }
         break;
