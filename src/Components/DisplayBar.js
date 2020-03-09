@@ -1,14 +1,14 @@
 import React from "react";
 
-import "./../styles.css";
+import { Layout } from "./../Layouts";
 
 const DisplayBar = ({ displayValue }) => {
   return (
-    <div className="display-bar">
+    <Layout stylesClass="display-bar">
       {displayValue.length >= 9 || !displayValue.length
         ? "Error"
         : displayValue}
-    </div>
+    </Layout>
   );
 };
 

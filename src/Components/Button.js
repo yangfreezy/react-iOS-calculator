@@ -1,12 +1,15 @@
 import React from "react";
 
-import "./../styles.css";
+import { Layout } from "./../Layouts";
 
 const Button = ({ type, buttonStyle, handleClick }) => {
   return (
-    <div onClick={() => handleClick(type)} className={`button ${buttonStyle}`}>
+    <Layout
+      onclick={() => handleClick(type)}
+      stylesClass={`button ${buttonStyle}`}
+    >
       {type}
-    </div>
+    </Layout>
   );
 };
 

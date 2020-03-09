@@ -23,15 +23,15 @@ body {
   margin: 20px 20px 20px 20px;
 }
 
-.calculator-layout {
+.calculator {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.calculator-row {
+.row {
   display: flex;
+  flex-direction: row;
 }
 
 .button {

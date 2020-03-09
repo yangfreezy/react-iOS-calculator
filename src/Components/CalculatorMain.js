@@ -1,11 +1,8 @@
 import React, { Fragment, useState } from "react";
 
-import CalculatorRow from "./../Layouts/CalculatorRow";
+import { Layout } from "./../Layouts";
 import Button from "./Button";
-
 import { calculateValue, removeInvalidZeros } from "./../Helpers/index";
-
-import "./../styles.css";
 
 const CalculatorMain = ({ displayValue, setDisplayValue }) => {
   const [firstInput, setFirstInput] = useState("");
@@ -167,7 +164,7 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
 
   return (
     <Fragment>
-      <CalculatorRow>
+      <Layout stylesClass="row">
         <Button
           buttonStyle={"light-grey-button"}
           handleClick={() =>
@@ -190,8 +187,8 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
           handleClick={() => handleOperationClick("÷")}
           type={"÷"}
         />
-      </CalculatorRow>
-      <CalculatorRow>
+      </Layout>
+      <Layout stylesClass="row">
         <Button
           buttonStyle={"dark-grey-button"}
           handleClick={() => handleNumberClick("7")}
@@ -212,8 +209,8 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
           handleClick={() => handleOperationClick("×")}
           type={"×"}
         />
-      </CalculatorRow>
-      <CalculatorRow>
+      </Layout>
+      <Layout stylesClass="row">
         <Button
           buttonStyle={"dark-grey-button"}
           handleClick={() => handleNumberClick("4")}
@@ -234,8 +231,8 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
           handleClick={() => handleOperationClick("-")}
           type={"-"}
         />
-      </CalculatorRow>
-      <CalculatorRow>
+      </Layout>
+      <Layout stylesClass="row">
         <Button
           buttonStyle={"dark-grey-button"}
           handleClick={() => handleNumberClick("1")}
@@ -256,8 +253,8 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
           handleClick={() => handleOperationClick("+")}
           type={"+"}
         />
-      </CalculatorRow>
-      <CalculatorRow>
+      </Layout>
+      <Layout stylesClass="row">
         <Button
           buttonStyle={"dark-grey-button wide-button"}
           handleClick={() => handleNumberClick("0")}
@@ -273,7 +270,7 @@ const CalculatorMain = ({ displayValue, setDisplayValue }) => {
           handleClick={() => handleOperationClick("=")}
           type={"="}
         />
-      </CalculatorRow>
+      </Layout>
     </Fragment>
   );
 };

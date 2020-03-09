@@ -1,4 +1,3 @@
-import CalculatorLayout from "./CalculatorLayout";
-import CalculatorRow from "./CalculatorRow";
+import Layout from "./Layout";
 
-export { CalculatorLayout, CalculatorRow };
+export { Layout };
